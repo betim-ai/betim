@@ -4,4 +4,5 @@ let betimModel = new BetimModel();
 
 window.onload = () => {
     // Todo On page loaded activites
+    console.log("I born")
 }
