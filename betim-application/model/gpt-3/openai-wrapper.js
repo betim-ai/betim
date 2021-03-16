@@ -2,13 +2,12 @@
  * Class for wrapping OpenAI requests.
  */
 export default class OpenAI {
-    //TODO: Implement OpenAI requests.
-    constructor(bearerToken, engineId = "ada", frequencyPenalty=0.5, presencePenalty=0.5) {
-        this.bearer_token = bearerToken;
+   
+    constructor(apiKey, engineId = "ada", frequencyPenalty=0.5, presencePenalty=0.5) {
+        this.bearer_token = apiKey;
         this.engineId = engineId;
         this.frequencyPenalty = frequencyPenalty;
         this.presencePenalty = presencePenalty;
-
         console.log("OpenAI is initialized.");
     }
 
@@ -25,7 +24,7 @@ export default class OpenAI {
     }
 
     /**
-     * Create a GPT completion.
+     * Create a GPT-3 completion.
      * @param {String} prompt 
      * @param {Number} maxTokens 
      * @param {Number} stop 
@@ -36,13 +35,14 @@ export default class OpenAI {
         let requestBody = {
             "prompt": prompt,
             "max_tokens": maxTokens,
-            "stop": stop
+            "stop": stop,
+            "presence_penalty" : this.presencePenalty,
+            "frequency_penalty" : this.frequencyPenalty
         };
 
         let xhr = this.createXHRequest("POST", url, callback);
-        xhr.send();
+        xhr.send(JSON.stringify(requestBody));
     }
-
 
     /**
      * Create a XHR object for requests.
@@ -64,6 +64,7 @@ export default class OpenAI {
         }
         
         xhr.setRequestHeader('Authorization', "Bearer " + this.bearer_token);
+        xhr.setRequestHeader('Content-Type', "application/json");
         return xhr;
     }
 }

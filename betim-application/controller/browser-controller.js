@@ -1,6 +1,7 @@
 import BetimModel from "../model/betim/betim-model.js";
 
 let betimModel = new BetimModel();
+
 betimModel.openAI.listEngines((a, b) => {
     console.log(a);
 })
