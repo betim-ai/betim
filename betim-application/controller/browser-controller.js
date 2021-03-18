@@ -1,17 +1,16 @@
 import BetimModel from "../model/betim/betim-model.js";
+import NLPLayer from "../model/betim/nlp-layer.js";
 
 let betimModel = new BetimModel();
+let nlpLayer = new NLPLayer();
 
-betimModel.openAI.listEngines((a, b) => {
-    console.log(a);
-})
-
-betimModel.openAI.createCompletion("Hello ", 40, ".", (a, b)=>{
-    console.log(a);
-})
+nlpLayer.prepare();
+nlpLayer.understand("Make paragraph color blue.", (result) => {
+    alert(result)
+});
 
 window.onload = () => {
     // Todo On page loaded activites
-    console.log("I born")
+    console.log("Browser window loaded");
     
 }
