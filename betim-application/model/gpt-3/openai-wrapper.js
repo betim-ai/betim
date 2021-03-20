@@ -15,12 +15,20 @@ export default class OpenAI {
      * List engines available on OpenAI
      * @param {function} callback
      */
-    listEngines(callback) {
+    async listEngines() {
         let url = "https://api.openai.com/v1/engines";
-        let xhr = this.createXHRequest("GET", url, callback);
+        let xhr = this.createXHRequest("GET", url);
         xhr.send();
-        console.log("List engines request sent.");
-        if (!callback) return xhr.response;
+        let response = xhr.response;
+        
+        return new Promise((resolve, reject) => {
+            if (response) {
+                console.log("Engine list response");
+                console.log(response);
+                resolve(response);
+            }
+            else reject();
+        });
     }
 
     /**
@@ -30,7 +38,7 @@ export default class OpenAI {
      * @param {Number} stop 
      * @param {Number} callback 
      */
-    createCompletion(prompt, maxTokens, stop, callback){
+    async createCompletion(prompt, maxTokens, stop){
         let url = `https://api.openai.com/v1/engines/${this.engineId}/completions`;
         let requestBody = {
             "prompt": prompt,
@@ -40,8 +48,15 @@ export default class OpenAI {
             "frequency_penalty" : this.frequencyPenalty
         };
 
-        let xhr = this.createXHRequest("POST", url, callback);
+        let xhr = this.createXHRequest("POST", url);
         xhr.send(JSON.stringify(requestBody));
+        let response = xhr.response;
+
+        return new Promise((resolve, reject) => {
+            // Todo build promise structure.
+            if (response) resolve(response);
+            else reject();
+        });
     }
 
     /**
@@ -50,19 +65,9 @@ export default class OpenAI {
      * @param {String} url Request URL
      * @param {function} callback Callback function
      */
-    createXHRequest(method, url, callback){
+    createXHRequest(method, url){
         let xhr = new XMLHttpRequest();
-
-        if (callback) {
-            xhr.open(method, url, true);
-            xhr.onload = () => {
-                callback(JSON.parse(xhr.response), xhr.status);
-            }
-
-        } else {
-            xhr.open(method, url, false);
-        }
-        
+        xhr.open(method, url, false);
         xhr.setRequestHeader('Authorization', "Bearer " + this.bearer_token);
         xhr.setRequestHeader('Content-Type', "application/json");
         return xhr;

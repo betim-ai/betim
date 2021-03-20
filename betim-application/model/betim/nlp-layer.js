@@ -14,29 +14,31 @@ export default class NLPLayer {
     /**
      * Prepare GPT-3 model
      */
-    prepare() {
+    async prepare() {
         /**
          * GPT-3 Fine Tuning Prompt
          */
         this.fineTuningPrompt = `
             Generating CSS Rules
 
-            Make background black for cards -> [class: "card",  property: "background-color: #000"];
-            Make font red for body -> [class: "body", property: "color: red"];
-            Set the background of the navbar as white -> [class: "navbar", property:"background-color: #ffffff"];
-            Make buttons white -> [class: "button", property: "background-color: #ffffff"];
-            Reduce the opacity of the cards by 0.2-> [class: "card", property: "opacity: 0.8"];
+            Make background black for cards$class="card"&property="background-color: #000";
+            Make font red for body$[class: "body", property: "color: red"];
+            Set the background of the navbar as white$[class: "navbar", property:"background-color: #ffffff"];
+            Make buttons white$[class: "button", property: "background-color: #ffffff"];
+            Reduce the opacity of the cards by 0.2$[class: "card", property: "opacity: 0.8"];
         `
-        this.openAI.createCompletion(this.fineTuningPrompt, 2, ";");
+        await this.openAI.createCompletion(this.fineTuningPrompt, 2, ";");
+        // TODO: Return promise
     }
 
-    understand(prompt, callback) {
+    async understand(prompt) {
         // GPT-3 Comminucation
         let formattedPrompt = this.fineTuningPrompt + `${prompt} ->`;
         this.openAI.createCompletion(formattedPrompt, 40, ";", (response, status) => {
             console.log(response);
-            callback(response.choices[0].text);
             //TODO: Error handling
         });
+
+        // TODO: Return promise
     }
 }
