@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div id="browserContainer" >
+<div id="introContainer">
     <div id="welcomePage" >
         <div class="flex-container" >
             <img src="https://www.flaticon.com/svg/vstatic/svg/1437/1437974.svg?token=exp=1616098702~hmac=a94cdce5854c87d9fdfcf3586a09aea8" width="50" height="50">
@@ -33,21 +33,24 @@
     </div>
 </div>
 
-<div id="browserBar" style="visibility: hidden">
-    <div class="flex-container">
-        <h1>BETİM</h1>
-        <input id="barInputURL" type="text" class="pure-input-rounded" />
-        <button class="button" onclick="loadButton()">LOAD</button>
-        <i class="material-icons" style="font-size:36px">settings_voice</i>
+<div id="browserContainer">
+    <div id="browserBar">
+        <div class="flex-container">
+            <h1>BETİM</h1>
+            <input id="barInputURL" type="text" class="pure-input-rounded" />
+            <button id="btnLoad" class="button">LOAD</button>
+            <i class="material-icons" style="font-size:36px">settings_voice</i>
+        </div>
     </div>
+    <webview id="contentFrame" src="https://simple.allybros.com"></webview>
 </div>
 
 </body>
 
 <script>
     function loadButton () {
-        document.getElementById("browserContainer").remove();
-        document.getElementById("browserBar").style.visibility= "visible";
+        document.getElementById("introContainer").remove();
+        document.getElementById("browserContainer").style.visibility= "visible";
         document.body.style.backgroundImage= "none";
     }
 </script>

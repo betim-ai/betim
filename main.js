@@ -5,7 +5,8 @@ function createWindow () {
         width : 800,
         height : 650,
         webPreferences : {
-            nodeIntegration: true
+            nodeIntegration: true,
+            webviewTag: true
         }
     })
 

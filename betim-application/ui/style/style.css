@@ -4,12 +4,51 @@ body {
   padding: 0px;
 }
 
-#browserContainer {
-  text-align: center;
-  position: absolute;
+#introContainer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute;
+}
+
+#browserContainer {
+  visibility: hidden;
+  height: 100vh;
+}
+#browserContainer #browserBar .flex-container {
+  padding: 0px 15px 15px 15px;
+  background-image: linear-gradient(to left, #7e3878, #666699, #6b5b95, #7e3878);
+}
+#browserContainer #browserBar h1 {
+  color: white;
+  margin-bottom: 0px;
+}
+#browserContainer #browserBar input {
+  color: white;
+  border: none;
+  background-color: transparent;
+  width: 20%;
+  border-bottom: 2px solid ghostwhite;
+  margin-bottom: 0px;
+}
+#browserContainer #browserBar button {
+  background-color: transparent;
+  border-radius: 10px;
+  color: white;
+  border-color: white;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+#browserContainer #browserBar i {
+  position: absolute;
+  right: 15px;
+  margin: 15px;
+}
+#browserContainer #contentFrame {
+  width: 100%;
+  height: 100%;
 }
 
 .flex-container {
@@ -43,37 +82,4 @@ input {
   padding: 15px;
   color: black;
   border-color: black;
-}
-
-#browserBar .flex-container {
-  padding: 0px 15px 15px 15px;
-  background-image: linear-gradient(to left, #7e3878, #666699, #6b5b95, #7e3878);
-}
-#browserBar h1 {
-  color: white;
-  margin-bottom: 0px;
-}
-#browserBar input {
-  color: white;
-  border: none;
-  background-color: transparent;
-  width: 20%;
-  border-bottom: 2px solid ghostwhite;
-  margin-bottom: 0px;
-}
-#browserBar button {
-  background-color: transparent;
-  border-radius: 10px;
-  color: white;
-  border-color: white;
-  margin-bottom: 0px;
-  margin-top: 10px;
-  font-size: 12px;
-}
-#browserBar i {
-  position: absolute;
-  right: 15px;
-  margin: 15px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

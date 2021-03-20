@@ -21,7 +21,7 @@ export default class OpenAI {
         xhr.send();
         let response = xhr.response;
         
-        return new Promise((resolve, reject) => {
+        return new Promise( (resolve, reject) => {
             if (response) {
                 console.log("Engine list response");
                 console.log(response);

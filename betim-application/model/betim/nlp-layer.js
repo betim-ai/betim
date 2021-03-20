@@ -6,7 +6,7 @@ import OpenAI from "../gpt-3/openai-wrapper.js"
  */
 export default class NLPLayer {
 
-    constructor(){
+    constructor() {
         this.openAI = new OpenAI("sk-t2oXJMSWR0MppX8IXWEOdq10AEW2CYDIvM2NMMpl", "curie");
         console.log("NLPLayer is initialized.");
     }
@@ -27,7 +27,7 @@ export default class NLPLayer {
             Make buttons white$[class: "button", property: "background-color: #ffffff"];
             Reduce the opacity of the cards by 0.2$[class: "card", property: "opacity: 0.8"];
         `
-        await this.openAI.createCompletion(this.fineTuningPrompt, 2, ";");
+        let promise = await this.openAI.createCompletion(this.fineTuningPrompt, 2, ";");
         // TODO: Return promise
     }
 
