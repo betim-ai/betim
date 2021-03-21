@@ -2,6 +2,44 @@ body {
   background-image: linear-gradient(to left, #7e3878, #666699, #6b5b95, #7e3878);
   margin: 0px;
   padding: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.brand {
+  font-style: oblique;
+}
+
+h2 {
+  margin: 15px;
+  font-size: 60px;
+  font-family: Merriweather, serif;
+}
+
+.button {
+  background-color: #d4d3d3;
+  border-radius: 0.2rem;
+  border-width: 0;
+  color: #333333;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-color: #cacaca;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(0.98);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.button:active {
+  transform: scale(0.95);
 }
 
 #introContainer {
@@ -15,36 +53,28 @@ body {
 #browserContainer {
   visibility: hidden;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-#browserContainer #browserBar .flex-container {
-  padding: 0px 15px 15px 15px;
+#browserContainer #browserBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
   background-image: linear-gradient(to left, #7e3878, #666699, #6b5b95, #7e3878);
 }
 #browserContainer #browserBar h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: white;
   margin-bottom: 0px;
 }
-#browserContainer #browserBar input {
-  color: white;
-  border: none;
-  background-color: transparent;
-  width: 20%;
-  border-bottom: 2px solid ghostwhite;
-  margin-bottom: 0px;
+#browserContainer #browserBar #addressContainer {
+  display: flex;
+  width: 40%;
 }
-#browserContainer #browserBar button {
-  background-color: transparent;
-  border-radius: 10px;
-  color: white;
-  border-color: white;
-  margin-bottom: 0px;
-  margin-top: 10px;
-  font-size: 12px;
-}
-#browserContainer #browserBar i {
-  position: absolute;
-  right: 15px;
-  margin: 15px;
+#browserContainer #browserBar #addressContainer .button {
+  margin-left: 12px;
 }
 #browserContainer #contentFrame {
   width: 100%;
@@ -57,29 +87,27 @@ body {
   text-align: center;
 }
 
-h2 {
-  margin: 15px;
-  font-size: 60px;
-  font-family: Merriweather, serif;
-}
-
 .card {
   display: flex;
   padding: 20px;
 }
 
-input {
+.urlInput {
   border: none;
-  background-color: transparent;
-  margin: 15px;
-  border-bottom: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: 0.3rem;
   width: 100%;
+  padding: 0.5rem 1rem;
+  transition: 0.25s;
+  border-width: 0px;
+  font-size: 1rem;
 }
-
-.button {
-  background-color: transparent;
-  border-radius: 10px;
-  padding: 15px;
-  color: black;
-  border-color: black;
+.urlInput:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.urlInput:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: dimgrey;
+  border-width: 2px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,8 +1,49 @@
-body{
+body {
   background-image: linear-gradient(to left,  #7e3878, #666699,#6b5b95,#7e3878);
   margin: 0px;
   padding: 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.brand {
+  font-style: oblique;
+}
+
+h2 {
+  margin: 15px; font-size: 60px;
+  font-family: Merriweather , serif;
+}
+
+.button {
+  background-color: #d4d3d3;
+  border-radius: 0.2rem;
+  border-width: 0;
+  color: #333333;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-color: #cacaca;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  font-weight: 600; 
+  padding: 0.5rem 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.98);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+
 
 #introContainer {
   top: 50%;
@@ -12,44 +53,33 @@ body{
   position: absolute;
 }
 
-#browserContainer{  
+#browserContainer {  
   visibility: hidden;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   #browserBar {
-    .flex-container{
-      padding: 0px 15px 15px 15px;
-      background-image: linear-gradient(to left,  #7e3878, #666699,#6b5b95,#7e3878);
-    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-image: linear-gradient(to left,  #7e3878, #666699,#6b5b95,#7e3878);
 
     h1{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       color: white;
       margin-bottom: 0px;
     }
 
-    input{
-      color: white;
-      border: none;
-      background-color: transparent;
-      width: 20%;
-      border-bottom: 2px solid ghostwhite;
-      margin-bottom: 0px;
-    }
+    #addressContainer {
+      display: flex;
+      width: 40%;
 
-    button{
-      background-color: transparent;
-      border-radius: 10px;
-      color: white;
-      border-color: white;
-      margin-bottom: 0px;
-      margin-top: 10px;
-      font-size: 12px;
-    }
-
-    i{
-      position: absolute;
-      right: 15px;
-      margin: 15px;
+      .button {
+        margin-left: 12px;
+      }
     }
 
   }
@@ -60,33 +90,35 @@ body{
   }
 }
 
-
-
 .flex-container{
   display: flex;
   margin: auto;
   text-align: center;
 }
-h2{
-  margin: 15px; font-size: 60px;
-  font-family: Merriweather , serif;
-}
+
 .card{
   display: flex;
   padding: 20px;
 }
-input{
-  border:none;
-  background-color:transparent;
-  margin: 15px  ;
-  border-bottom: 2px solid black;
-  width: 100%;
-}
-.button{
-  background-color: transparent;
-  border-radius: 10px;
-  padding: 15px ;
-  color: black;
-  border-color: black;
-}
 
+.urlInput{
+  border:none;
+  background-color: rgba($color: #ffffff, $alpha: 0.15);
+  color: white;
+  border-radius: 0.3rem;
+  width: 100%;
+  padding: .5rem 1rem;
+  transition: .25s;
+  border-width: 0px;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+
+  &:focus {
+    background-color: rgba($color: #ffffff, $alpha: 0.2);
+    border-color: dimgrey;
+    border-width: 2px;
+  }
+}
