@@ -22,10 +22,10 @@ export default class OpenAI {
         let response = xhr.response;
         
         return new Promise( (resolve, reject) => {
-            if (response) {
-                console.log("Engine list response");
-                console.log(response);
-                resolve(response);
+            if (xhr.status == 200 && response) {
+                console.log("OpenAI: Engine list response.");
+                let responseObj = JSON.parse(response);
+                resolve(responseObj);
             }
             else reject();
         });
@@ -53,8 +53,11 @@ export default class OpenAI {
         let response = xhr.response;
 
         return new Promise((resolve, reject) => {
-            // Todo build promise structure.
-            if (response) resolve(response);
+            if (xhr.status == 200 && response) {
+                console.log("OpenAI: Create completion response.");
+                let responseObj = JSON.parse(response);
+                resolve(responseObj);
+            }
             else reject();
         });
     }

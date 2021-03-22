@@ -7,38 +7,55 @@ import OpenAI from "../gpt-3/openai-wrapper.js"
 export default class NLPLayer {
 
     constructor() {
-        this.openAI = new OpenAI("sk-t2oXJMSWR0MppX8IXWEOdq10AEW2CYDIvM2NMMpl", "curie");
+        this.openAI = new OpenAI("sk-t2oXJMSWR0MppX8IXWEOdq10AEW2CYDIvM2NMMpl", "babbage");
         console.log("NLPLayer is initialized.");
     }
 
     /**
      * Prepare GPT-3 model
      */
-    async prepare() {
+    prepare() {
         /**
+         * TODO: Dynamic fine tuning prompt generation.
          * GPT-3 Fine Tuning Prompt
          */
         this.fineTuningPrompt = `
-            Generating CSS Rules
+        Generating CSS Rules
 
-            Make background black for cards$class="card"&property="background-color: #000";
-            Make font red for body$[class: "body", property: "color: red"];
-            Set the background of the navbar as white$[class: "navbar", property:"background-color: #ffffff"];
-            Make buttons white$[class: "button", property: "background-color: #ffffff"];
-            Reduce the opacity of the cards by 0.2$[class: "card", property: "opacity: 0.8"];
+        Make background black for cards=>selector:"card",  property:"background-color", value="#000";
+        Make headings bigger=>selector:"h1, h2, h3, h4, h5, h6", property:"transform", value="scale(1.10)";
+
         `
-        let promise = await this.openAI.createCompletion(this.fineTuningPrompt, 2, ";");
-        // TODO: Return promise
     }
 
+    /**
+     * Understand the user request which is given in natural language, 
+     * using GPT-3 through OpenAI wrapper. Then generete syntax tree in  JSON format.
+     * @param {String} prompt 
+     */
     async understand(prompt) {
         // GPT-3 Comminucation
-        let formattedPrompt = this.fineTuningPrompt + `${prompt} ->`;
-        this.openAI.createCompletion(formattedPrompt, 40, ";", (response, status) => {
-            console.log(response);
-            //TODO: Error handling
-        });
+        let formattedPrompt = this.fineTuningPrompt + `${prompt}=>`;
+        let gptOutput = await this.openAI.createCompletion(formattedPrompt, 40, ";");
 
-        // TODO: Return promise
+        return new Promise( (resolve, reject) => {
+            let ast = this.genereteAST(gptOutput.choices[0].text);
+            if (ast) {
+                console.log("NLPLayer prompt: ", prompt, ast);
+                resolve(ast);
+            }
+            else reject();
+        });
+    }
+
+    /**
+     * Generate abstract syntax tree using given input.
+     * @param {String} query 
+     */
+    genereteAST(query) {
+        // TODO: Decode string and generete AST
+        return {
+            "raw" : query
+        }
     }
 }
