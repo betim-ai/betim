@@ -4,7 +4,7 @@
  * Generates CSS code using speech or text data.
  */
 
-import NLPLayer from "../model/betim/nlp-layer.js";
+import NLPLayer from "nlp-layer.js";
 import CSSLayer from "./css-layer.js";
 
 export default class BetimModel {
