@@ -40,3 +40,35 @@ function genereteAST(query) {
         "ast" : ast
     }
 }
+
+function decodeAST(ast){
+    let cssSnippet="";
+
+    let selectorGroup = ast[0].selectorGroup;
+    let declarationBlock = ast[0].declarationBlock;
+
+    if (!selectorGroup || !declarationBlock) {
+        console.error("Malformed ast object.");
+        return undefined;
+    }
+        
+    
+    // Decode selector group
+    for (let i=0; i<selectorGroup.length; i++) {
+        cssSnippet += selectorGroup[i].name;
+        
+        if (i != selectorGroup.length - 1)
+            cssSnippet += ", "
+    }
+
+    cssSnippet += " {\n"
+    // Build statement block
+    for (let i=0; i<declarationBlock.length; i++) {
+        let declaration = declarationBlock[i];
+        cssSnippet += `\t${declaration.property}: ${declaration.value};\n`
+    }
+
+    cssSnippet += "}"
+
+    return cssSnippet;
+}

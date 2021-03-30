@@ -4,7 +4,7 @@
  * Generates CSS code using speech or text data.
  */
 
-import NLPLayer from "nlp-layer.js";
+import NLPLayer from "./nlp-layer.js";
 import CSSLayer from "./css-layer.js";
 
 export default class BetimModel {
@@ -23,9 +23,20 @@ export default class BetimModel {
      */
     async evalText(textPrompt) {
         // TODO: Implement betim model
-        let ast = await this.nlpLayer.understand(textPrompt);
+        let nlpResult = await this.nlpLayer.understand(textPrompt);
+        let ast = nlpResult.ast;
 
-        console.log(textPrompt);
+        let css = this.cssLayer.decodeAST(ast);
+
+        console.log(css);
+
+        return new Promise( (resolve, reject) => {
+            if (css) {
+                resolve(css);
+            } else {
+                reject();
+            }
+        })
     }
 
     /**

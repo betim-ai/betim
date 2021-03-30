@@ -57,9 +57,9 @@ export default class NLPLayer {
     genereteAST(query) {
         // Ex: selector:"h1, h2, h3, h4, h5, h6", property:"transform", value:"scale(1.10)"
         // Extract parameters and values
-        let removedVal = query.replace(/"[\w\s,()*!.\#"]*"/g, "");
+        let removedVal = query.replace(/"[\w\s,()*!.\#\-"]*"/g, "");
         let parameters = removedVal.split(",");
-        let values = query.match(/"[\w\s,()*!.\#"]*"/g);
+        let values = query.match(/"[\w\s,()*!.\#\-"]*"/g);
     
         if (parameters.length != parameters.length) {
             return undefined;
