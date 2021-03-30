@@ -8,15 +8,20 @@ window.onload = () => {
     console.log("Browser window loaded");
     document.querySelector("#btnLoad").addEventListener('click', loadUrl);
     webview = document.querySelector("#contentFrame");
+
+
 }
 
 function loadUrl(){
     let userInput = document.querySelector("#barInputURL");
-    console.log("SA");
+    webview.src = userInput.value;
+    console.log("Load web page: ", userInput.value);
 
+}
+
+function applyBetimResponse() {
     betim.evalText(userInput.value).then( (result) => { 
             webview.insertCSS(result)
         }
     );
-
 }

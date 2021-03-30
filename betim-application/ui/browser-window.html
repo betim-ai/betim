@@ -37,13 +37,30 @@
 <div id="browserContainer">
     <div id="browserBar">
         <h1 class="brand">Betim</h1>
-        <div id="addressContainer">
+        <div class="addressContainer" id="addressContainer">
             <input id="barInputURL" type="text" class="urlInput" />
-            <button id="btnLoad" class="button">LOAD</button>
+            <button id="btnLoad" class="button">Go</button>
         </div>
-        <i class="material-icons" style="font-size:36px; color: white;">settings_voice</i>
+        <div class="toolbar">
+            <i class="toolbar-item material-icons">settings_voice</i>
+            <i class="toolbar-item material-icons">message</i>
+        </div>
+        
     </div>
     <webview id="contentFrame" src="https://simple.allybros.com"></webview>
+</div>
+
+<div class="message-pane">
+
+    <div class="text-prompt-container">
+        <input class="text-prompt" type="text" placeholder="Explain your style rule..."/>
+        <button class="button">Apply</button>
+    </div>
+
+    <div id="toastContainer">
+        <div class="toast-card toast-card-success">Sorry! Couldn't understand your prompt.</div>
+        <div class="toast-card toast-card-danger">Sorry! Couldn't understand your prompt.</div>
+    </div>
 </div>
 
 </body>

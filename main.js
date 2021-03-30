@@ -9,7 +9,7 @@ function createWindow () {
             webviewTag: true
         }
     })
-
+    win.setMenu(null);
     win.loadFile("betim-application/ui/browser-window.html");
 }
 
