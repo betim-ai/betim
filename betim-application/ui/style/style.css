@@ -1,5 +1,4 @@
 body {
-  background-image: linear-gradient(to left, #7e3878, #666699, #6b5b95, #7e3878);
   margin: 0px;
   padding: 0px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -42,7 +41,7 @@ h2 {
   transform: scale(0.95);
 }
 
-#introContainer {
+#intro-container {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -50,13 +49,12 @@ h2 {
   position: absolute;
 }
 
-#browserContainer {
-  visibility: hidden;
+#browser-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
-#browserContainer #browserBar {
+#browser-container #browser-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,35 +62,35 @@ h2 {
   padding: 12px;
   background-image: linear-gradient(to left, #7e3878, #666699, #6b5b95, #7e3878);
 }
-#browserContainer #browserBar h1 {
+#browser-container #browser-bar h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: white;
   margin-bottom: 0px;
 }
-#browserContainer #browserBar #addressContainer {
+#browser-container #browser-bar #address-container {
   display: flex;
   width: 40%;
 }
-#browserContainer #browserBar #addressContainer .button {
+#browser-container #browser-bar #address-container .button {
   margin-left: 12px;
 }
-#browserContainer #browserBar .toolbar {
+#browser-container #browser-bar .toolbar {
   display: flex;
 }
-#browserContainer #browserBar .toolbar .toolbar-item {
+#browser-container #browser-bar .toolbar .toolbar-item {
   color: white;
   padding-left: 1rem;
   cursor: pointer;
   transition: 0.5s;
   font-size: 28px;
 }
-#browserContainer #browserBar .toolbar .toolbar-item:hover {
+#browser-container #browser-bar .toolbar .toolbar-item:hover {
   opacity: 0.5;
 }
-#browserContainer #browserBar .toolbar .toolbar-item:active {
+#browser-container #browser-bar .toolbar .toolbar-item:active {
   opacity: 1;
 }
-#browserContainer #contentFrame {
+#browser-container #content-frame-webview {
   width: 100%;
   height: 100%;
 }
@@ -108,7 +106,7 @@ h2 {
   padding: 20px;
 }
 
-.urlInput {
+.url-input {
   border: none;
   background-color: rgba(255, 255, 255, 0.15);
   color: white;
@@ -119,10 +117,10 @@ h2 {
   border-width: 0px;
   font-size: 1rem;
 }
-.urlInput:hover {
+.url-input:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
-.urlInput:focus {
+.url-input:focus {
   background-color: rgba(255, 255, 255, 0.2);
   border-color: dimgrey;
   border-width: 2px;

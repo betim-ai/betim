@@ -14,32 +14,12 @@
 </head>
 <body>
 
-<div id="introContainer">
-    <div id="welcomePage" >
-        <div class="flex-container" >
-            <img src="https://www.flaticon.com/svg/vstatic/svg/1437/1437974.svg?token=exp=1616098702~hmac=a94cdce5854c87d9fdfcf3586a09aea8" width="50" height="50">
-            <img src="https://www.flaticon.com/svg/vstatic/svg/2491/2491413.svg?token=exp=1616098749~hmac=9d7ae7f3ac1eeeea941245f16e505f69"  width="90" height="90">
-            <h2><i>BETİM</i></h2>
-        </div>
-        <div>
-            <p><i style="font-size: 18px">"Change the style with your words!"</i></p>
-        </div>
-
-        <div class="card flex-container" >
-            <input id="inputURL" type="text" class="pure-input-rounded" />
-        </div>
-        <div>
-            <button id="loadButton" class="button" onclick="loadButton()">LOAD</button>
-        </div>
-    </div>
-</div>
-
-<div id="browserContainer">
-    <div id="browserBar">
+<div id="browser-container">
+    <div id="browser-bar">
         <h1 class="brand">Betim</h1>
-        <div class="addressContainer" id="addressContainer">
-            <input id="barInputURL" type="text" class="urlInput" />
-            <button id="btnLoad" class="button">Go</button>
+        <div class="address-container" id="address-container">
+            <input id="bar-url-input" type="text" class="url-input"/>
+            <button id="load-btn" class="button">Go</button>
         </div>
         <div class="toolbar">
             <i class="toolbar-item material-icons">settings_voice</i>
@@ -47,13 +27,12 @@
         </div>
         
     </div>
-    <webview id="contentFrame" src="https://simple.allybros.com"></webview>
+    <webview id="content-frame-webview" src="https://simple.allybros.com"></webview>
 </div>
 
 <div class="message-pane">
-
     <div class="text-prompt-container">
-        <input class="text-prompt" type="text" placeholder="Explain your style rule..."/>
+        <input id="betim-text-input"class="text-prompt" type="text" placeholder="Explain your style rule..."/>
         <button class="button">Apply</button>
     </div>
 
@@ -64,7 +43,6 @@
 </div>
 
 </body>
-
 <script>
     function loadButton () {
         document.getElementById("introContainer").remove();
