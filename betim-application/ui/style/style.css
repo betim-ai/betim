@@ -170,4 +170,12 @@ h2 {
   background: #976fc4;
   float: right;
   color: white;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

@@ -4,14 +4,23 @@ let betim = new BetimModel();
 let contentFrameWebview;
 let betimTextInput;
 let barUrlInput;
+let messagePane;
+let toastContainer;
+
+let barTextInputButton;
+let barSpeechInputButton;
+
 
 window.onload = () => {
     // TODO: On page loaded activites
     document.querySelector("#load-btn").addEventListener('click', loadWebviewUrlAction);
+    document.querySelector("#bar-text-input-btn").addEventListener('click', toggleBetimTextInput);
 
     contentFrameWebview = document.querySelector("#content-frame-webview");
     betimTextInput = document.querySelector("#betim-text-input");
     barUrlInput = document.querySelector("#bar-url-input");
+    messagePane = document.querySelector("#message-pane");
+    toastContainer = document.querySelector("#toast-container");
 
     console.log("Browser window is loaded.");
 }
@@ -24,6 +33,7 @@ function loadWebviewUrlAction(){
     contentFrameWebview.src = userInput;
     console.log("Load web page: ", userInput.value);
     // Add spinners
+    showAlertMessage("Page loading", "success");
 }
 
 /**
@@ -41,4 +51,26 @@ function applyBetimTextInputAction() {
     }).catch(() => {
         // Alert dialog implementation
     });
+}
+
+function showAlertMessage(message, className) {
+    toastContainer.innerHTML += `<div class="toast-card toast-card-${className}">${message}</div>`;
+    
+    setTimeout(() => {
+        document.querySelector(".toast-card").remove();
+    }, 2000);
+}
+
+/**
+ * Toggles betim text input dialog visibility.
+ */
+function toggleBetimTextInput() {
+    let textPromptCotainer = document.querySelector(".text-prompt-container");
+    let classNames = textPromptCotainer.classList;
+    if (classNames.contains("invisible")) {
+        // TODO: Animate
+        textPromptCotainer.classList.remove("invisible");
+    } else {
+        textPromptCotainer.classList.add("invisible");
+    }
 }
