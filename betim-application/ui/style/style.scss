@@ -141,7 +141,7 @@ h2 {
 
 .message-pane {
   position: absolute;
-  top: 4rem;
+  top: 5rem;
   right: 1rem;
   width: 20rem;
   z-index: 10;
@@ -172,6 +172,7 @@ h2 {
   border-radius: 0.2rem;
   display: flex;
   flex-direction: column;
+  transition: ease-in-out 1s;
 
   .text-prompt {
     display: block;
@@ -194,4 +195,10 @@ h2 {
 
 .visible {
   display: block;
+  opacity: 1;
+}
+
+.ghost {
+  transition: ease-in-out 0.5s;
+  opacity: 0;
 }

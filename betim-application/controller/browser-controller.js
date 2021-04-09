@@ -15,6 +15,7 @@ window.onload = () => {
     // TODO: On page loaded activites
     document.querySelector("#load-btn").addEventListener('click', loadWebviewUrlAction);
     document.querySelector("#bar-text-input-btn").addEventListener('click', toggleBetimTextInput);
+    document.querySelector("#betim-text-apply-btn").addEventListener('click', applyBetimTextInputAction);
 
     contentFrameWebview = document.querySelector("#content-frame-webview");
     betimTextInput = document.querySelector("#betim-text-input");
@@ -48,13 +49,16 @@ function applyBetimTextInputAction() {
         // Insert generated css
         contentFrameWebview.insertCSS(result);
         // Show sucess dialog
+        console.log("Inserted: "+result);
+        showAlertMessage("Style is updated!", "success");
     }).catch(() => {
         // Alert dialog implementation
+        showAlertMessage("Sorry! Betim couldn't understand your request. Please see prompt guide.", "success");
     });
 }
 
 function showAlertMessage(message, className) {
-    toastContainer.innerHTML += `<div class="toast-card toast-card-${className}">${message}</div>`;
+    toastContainer.innerHTML += `<div class="animate__animated animate__fadeIn toast-card toast-card-${className}">${message}</div>`;
     
     setTimeout(() => {
         document.querySelector(".toast-card").remove();

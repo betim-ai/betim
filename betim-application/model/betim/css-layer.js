@@ -29,7 +29,7 @@ export default class CSSLayer {
         // Build statement block
         for (let i=0; i<declarationBlock.length; i++) {
             let declaration = declarationBlock[i];
-            cssSnippet += `\t${declaration.property}: ${declaration.value};\n`
+            cssSnippet += `\t${declaration.property}: ${declaration.value} !important;\n`
         }
     
         cssSnippet += "}"
