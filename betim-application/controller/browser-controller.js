@@ -50,10 +50,10 @@ function applyBetimTextInputAction() {
         contentFrameWebview.insertCSS(result);
         // Show sucess dialog
         console.log("Inserted: "+result);
-        showAlertMessage("Style is updated!", "success");
+        showAlertMessage("Style is updated!<br>"+result, "success");
     }).catch(() => {
         // Alert dialog implementation
-        showAlertMessage("Sorry! Betim couldn't understand your request. Please see prompt guide.", "success");
+        showAlertMessage("Sorry! Betim couldn't understand your request. Please see prompt guide.", "danger");
     });
 }
 
