@@ -1,14 +1,12 @@
+import NLPLayer from "./nlp-layer.js";
+import CSSLayer from "./css-layer.js";
+
 /**
  * Betim AI Model Class
  * Composition of 3 abstraction layers; STT, NLP, CSS.
  * Generates CSS code using speech or text data.
  */
-
-import NLPLayer from "./nlp-layer.js";
-import CSSLayer from "./css-layer.js";
-
 export default class BetimModel {
-    // TODO: Implement sub layers
 
     constructor() {
         // this.sttLayer;

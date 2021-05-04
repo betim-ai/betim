@@ -1,3 +1,8 @@
+/**
+ * Betim CSS Layer Class
+ * Responsible for generating a valid CSS code from
+ * any CSS Abstract syntax tree
+ */
 export default class CSSLayer {
 
     /**
@@ -11,7 +16,7 @@ export default class CSSLayer {
         let selectorGroup = ast[0].selectorGroup;
         let declarationBlock = ast[0].declarationBlock;
     
-        // Check AST format.
+        // Validate AST format.
         if (!selectorGroup || !declarationBlock) {
             console.error("Malformed ast object.");
             return undefined;

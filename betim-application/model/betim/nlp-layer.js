@@ -1,6 +1,7 @@
 import OpenAI from "../gpt-3/openai-wrapper.js"
 
 /**
+ * Betim NLP Layer Class
  * Represents NLP layer of the Betim Model.
  * Comminucates with GPT-3 using OpenAI api.
  */
@@ -13,13 +14,10 @@ export default class NLPLayer {
     }
 
     /**
-     * Prepare GPT-3 model
+     * Prepares GPT-3 model
      */
     prepare() {
-        /**
-         * TODO: Dynamic fine tuning prompt generation.
-         * GPT-3 Fine Tuning Prompt
-         */
+        // GPT-3 Finetuning prompy
         this.fineTuningPrompt = `
         Generating CSS Rules
 
@@ -27,8 +25,7 @@ export default class NLPLayer {
         Make headings bigger=>selector:"h1, h2, h3, h4, h5, h6", property:"transform", value:"scale(1.10)";
         Change paragraph color green=>selector:"p", property:"color", value:"#00ff00";
         Make background red=>selector:"body", property:"color", value:"red";
-        Make paragraphs bigger=>selector:"p", property:"transform", value:"scale(1.10)";
-        `
+       `
     }
 
     /**
