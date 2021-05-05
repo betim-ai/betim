@@ -28,7 +28,7 @@ window.onload = () => {
     // Initialize betim model, read tuning prompt if exists.
     betim.prepareModel().then(() => {
         showAlertMessage("Betim is ready for your requests.", "success");
-    } );
+    });
 }
 
 /**
@@ -67,7 +67,7 @@ function showAlertMessage(message, className) {
     
     setTimeout(() => {
         let element = document.querySelector(".toast-card");
-        fadeOut(element);
+        element.remove();
     }, 5000);
 }
 

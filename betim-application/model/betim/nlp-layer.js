@@ -9,7 +9,7 @@ export default class NLPLayer {
 
     constructor() {
         this.ready = false;
-        this.openAI = new OpenAI("sk-t2oXJMSWR0MppX8IXWEOdq10AEW2CYDIvM2NMMpl", "curie");
+        this.openAI = new OpenAI("sk-t2oXJMSWR0MppX8IXWEOdq10AEW2CYDIvM2NMMpl", "davinci");
         console.log("NLPLayer is initialized.");
     }
 

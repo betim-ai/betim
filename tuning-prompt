@@ -1,6 +1,19 @@
 Generating CSS Rules
 
-Make background black for cards=>selector:"card", property:"background-color", value:"#000";
 Make headings bigger=>selector:"h1, h2, h3, h4, h5, h6", property:"transform", value:"scale(1.10)";
-Change paragraph color green=>selector:"p", property:"color", value:"#00ff00";
-Make background red=>selector:"body", property:"color", value:"red";
+Increase font weight of headings=>selector:"h1, h2, h3, h4, h5, h6", property:"font-weight", value:"bolder";
+Increase text size=>selector:"p", property:"font-size", value:"1.5rem";
+Increase letter spacing of paragraphs=>selector:"p", property:"letter-spacing", value:"6px";
+Make links bolder=>selector:"a", property:"font-weight", value:"bolder";
+Decrease opacity of images=>selector:"img", property:"opacity", value:"0.5";
+Increase paddings of table cells=>selector:"td" property:"padding", value:"6px";
+Make background color blue=>selector:"body", property:"background-color", value:"blue";
+Change paragraph font to Cursive=>selector:"p", property:"font-family", value:"Cursive";
+Set link colors to pink=>selector:"a", property:"color", value:"pink";
+Set all fonts as Fantasy=>selector:"*", property:"font-family", value:"Fantasy";
+Set lists colors to red=>selector:"ul, li, ol", property:"color", value:"#ff0000";
+Make buttons blue=>selector:"button", property:"background-color", value:"rgb(0, 0, 255)";
+Make buttons text color white=>selector:"button", property:"color", value:"white";
+Make headings visible=>selector:"h1, h2, h3, h4, h5, h6", property:"overflow", value:"visible";
+Make headings bigger=>selector:"h1, h2, h3, h4, h5, h6", property:"transform", value:"scale(1.10)";
+Hide images=>selector:"img", property:"overflow", value:"hidden";
