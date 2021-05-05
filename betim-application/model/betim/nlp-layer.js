@@ -8,16 +8,16 @@ import OpenAI from "../gpt-3/openai-wrapper.js"
 export default class NLPLayer {
 
     constructor() {
+        this.ready = false;
         this.openAI = new OpenAI("sk-t2oXJMSWR0MppX8IXWEOdq10AEW2CYDIvM2NMMpl", "curie");
         console.log("NLPLayer is initialized.");
-        this.prepare()
     }
 
     /**
      * Prepares GPT-3 model
      */
-    prepare() {
-        // GPT-3 Finetuning prompy
+    async prepare() {
+        // GPT-3 Finetuning prompt
         this.fineTuningPrompt = `
         Generating CSS Rules
 
@@ -26,6 +26,24 @@ export default class NLPLayer {
         Change paragraph color green=>selector:"p", property:"color", value:"#00ff00";
         Make background red=>selector:"body", property:"color", value:"red";
        `
+
+       // Try to fetch prompt data from external file
+       console.log("NLP: Trying to fetch external tuning-prompt file...")
+        let externalTuningResponse = await fetch("../../tuning-prompt");
+        let externalTuningPrompt = await externalTuningResponse.text();
+
+        if (externalTuningPrompt) {
+            this.fineTuningPrompt = externalTuningPrompt;
+            console.log("Read the tuning prompt:");
+            console.log(externalTuningPrompt);
+            console.log("NLP: Updated fine tuning prompt from external file.");
+        }
+        console.log("NLP layer is prepared.");
+        
+        return new Promise( (resolve) => {
+            this.ready = true;
+            resolve(this);
+        })
     }
 
     /**
@@ -46,6 +64,10 @@ export default class NLPLayer {
             }
             else reject();
         });
+    }
+
+    isReady() {
+        return this.ready;
     }
 
     /**

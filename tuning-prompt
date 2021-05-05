@@ -1,0 +1,6 @@
+Generating CSS Rules
+
+Make background black for cards=>selector:"card", property:"background-color", value:"#000";
+Make headings bigger=>selector:"h1, h2, h3, h4, h5, h6", property:"transform", value:"scale(1.10)";
+Change paragraph color green=>selector:"p", property:"color", value:"#00ff00";
+Make background red=>selector:"body", property:"color", value:"red";

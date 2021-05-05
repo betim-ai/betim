@@ -9,10 +9,25 @@ import CSSLayer from "./css-layer.js";
 export default class BetimModel {
 
     constructor() {
-        // this.sttLayer;
+        // this.sttLayer; COMING SOON
         this.nlpLayer = new NLPLayer();
         this.cssLayer = new CSSLayer();
         console.log("Betim model is initialized.");
+        this.ready = false;
+    }
+
+    /**
+     * Prepares and configures all submodules of the Betim model.
+     * @returns Promise
+     */
+    async prepareModel() {
+        console.log("BetimModel: Preparing betim model.")
+        // Ensure the all components are ready.
+        await this.nlpLayer.prepare();
+        return new Promise((resolve, reject) => {
+            this.ready = true;
+            resolve();
+        });
     }
 
     /**
@@ -20,10 +35,14 @@ export default class BetimModel {
      * @param {String} textPrompt 
      */
     async evalText(textPrompt) {
-        // TODO: Implement betim model
+        // Check if all the components are prepared.
+        if (!this.ready) throw "Betim components are not ready yet!";
+
+        // Generate nlp result from NLP Layer
         let nlpResult = await this.nlpLayer.understand(textPrompt);
         let ast = nlpResult.ast;
-
+        
+        // Send NLP result to the CSS Layer
         let css = this.cssLayer.decodeAST(ast);
 
         console.log(css);

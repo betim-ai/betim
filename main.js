@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require("electron")
+const {app, BrowserWindow} = require("electron");
 
 function createWindow () {
     const win = new BrowserWindow({
@@ -6,11 +6,12 @@ function createWindow () {
         height : 720,
         webPreferences : {
             nodeIntegration: true,
-            webviewTag: true
+            webviewTag: true       
         }
-    })
+    });
     // win.setMenu(null);
     win.loadFile("betim-application/ui/browser-window.html");
+
 }
 
 app.whenReady().then(createWindow);
@@ -26,3 +27,4 @@ app.on('activate', () => {
         createWindow()
     }
 })
+

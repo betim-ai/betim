@@ -24,6 +24,11 @@ window.onload = () => {
     toastContainer = document.querySelector("#toast-container");
 
     console.log("Browser window is loaded.");
+
+    // Initialize betim model, read tuning prompt if exists.
+    betim.prepareModel().then(() => {
+        showAlertMessage("Betim is ready for your requests.", "success");
+    } );
 }
 
 /**
@@ -61,9 +66,23 @@ function showAlertMessage(message, className) {
     toastContainer.innerHTML += `<div class="animate__animated animate__fadeIn toast-card toast-card-${className}">${message}</div>`;
     
     setTimeout(() => {
-        document.querySelector(".toast-card").remove();
-    }, 2000);
+        let element = document.querySelector(".toast-card");
+        fadeOut(element);
+    }, 5000);
 }
+
+function fadeOut(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.01){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        op -= 0.01;
+    }, 50);
+}
+
 
 /**
  * Toggles betim text input dialog visibility.
