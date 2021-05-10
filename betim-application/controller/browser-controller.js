@@ -68,7 +68,7 @@ function showAlertMessage(message, className) {
     setTimeout(() => {
         let element = document.querySelector(".toast-card");
         element.remove();
-    }, 5000);
+    }, 6000);
 }
 
 function fadeOut(element) {

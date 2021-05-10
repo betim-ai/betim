@@ -59,8 +59,8 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
-  background-image: linear-gradient(to left, #7e3878, #666699, #6b5b95, #7e3878);
+  padding: 8px;
+  background: #3f2f4e;
 }
 #browser-container #browser-bar h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -128,9 +128,9 @@ h2 {
 
 .message-pane {
   position: absolute;
-  top: 5rem;
-  right: 1rem;
-  width: 20rem;
+  top: 4rem;
+  right: 0.8rem;
+  width: 22rem;
   z-index: 10;
 }
 
@@ -139,6 +139,7 @@ h2 {
   border-radius: 0.3rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .toast-card-danger {
@@ -166,6 +167,7 @@ h2 {
   padding: 0.5rem;
   border-radius: 0.2rem;
   border-width: 0;
+  font-size: 1rem;
 }
 .text-prompt-container .button {
   background: #976fc4;
