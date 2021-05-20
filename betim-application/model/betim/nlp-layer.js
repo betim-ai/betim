@@ -9,7 +9,7 @@ export default class NLPLayer {
 
     constructor() {
         this.ready = false;
-        this.openAI = new OpenAI("sk-t2oXJMSWR0MppX8IXWEOdq10AEW2CYDIvM2NMMpl", "davinci");
+        this.openAI = undefined;
         console.log("NLPLayer is initialized.");
     }
 
@@ -17,6 +17,21 @@ export default class NLPLayer {
      * Prepares GPT-3 model
      */
     async prepare() {
+        // Initialize openAI
+        console.log("NLP: Initializing OpenAI...");
+        let secretsResponse = await fetch("../../secrets.json");        
+        if (!secretsResponse) throw "NLP: Cannot read secrets file.";
+        
+        let secretsText = await secretsResponse.text();
+        let secretsData = JSON.parse(secretsText);
+        if (!secretsData) throw "NLP: Cannot parse secrets file.";
+        
+        let openAIKey = secretsData.open_ai_key;
+        if (!openAIKey) throw "NLP: Cannot find openapi key.";
+
+        this.openAI = new OpenAI(openAIKey, "davinci");
+        console.log("NLP: OpenAPI is initialized.");
+
         // GPT-3 Finetuning prompt
         this.fineTuningPrompt = `
         Generating CSS Rules
