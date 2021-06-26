@@ -9,8 +9,9 @@ function createWindow () {
             webviewTag: true       
         }
     });
-    // win.setMenu(null);
-    win.loadFile("betim-application/ui/browser-window.html");
+   // win.setMenu(null);
+    win.loadFile("betim-application/ui/tests.html");
+    process.env.GOOGLE_API_KEY = 'ccd9434b46b3c7adb961bacc62f5607bb335aa64'
 
 }
 
