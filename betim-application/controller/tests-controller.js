@@ -124,8 +124,11 @@ function testExample() {
     });
 
     testItemIndex++;
-    if (testItemIndex >= testSet.length) return;
-    setTimeout(testExample, 1000);
+    if (testItemIndex >= testSet.length) {
+        alert("Bitti çok şükür!");
+        return;
+    };
+    setTimeout(testExample, 500);
 }
 
 function evaluateResult(ast, trueSelector, trueProperty, trueValue, examplePrompt) {
@@ -182,8 +185,8 @@ function evaluateResult(ast, trueSelector, trueProperty, trueValue, examplePromp
         }
         else falseValues += 1;
     } else {
-        trueValues != 1;
-    }
+        isValueTrue = true;  
+    } 
     
     totalExamples += 1;
     if (isValueTrue && isPropertyTrue && isSelectorTrue) {
