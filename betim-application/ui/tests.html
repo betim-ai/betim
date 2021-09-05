@@ -16,11 +16,44 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
+
+        h1 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .failedCaseDiv {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .modal {
+            position: fixed;
+            top: 100px;
+            margin: auto;
+            z-index: 2000;
+            left: 20%;
+            width: 55%;
+            padding: 1rem;
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+            background: #eee;
+        }
+
     </style>
     <script src="../controller/tests-controller.js"  type="module"></script>
 </head>
 <body>
-    <button id="btnStartTest" onclick="startTest()">Run tests</button>
+    <h1>Betim Tests</h1>
+    <p id="betimTestSetStatus"></p>
+    <button id="btnStartTest" onclick="startTest()">Start Testing</button>
+    <hr>
+
     <table>
         <tr>
             <td>Total examples:</td>
@@ -91,12 +124,11 @@
         </tr>
     </table>
 
-
     <div style="border: 2px solid red">
         <div style="background-color: rgb(245, 161, 161); padding: 0.5rem;">Failure cases</div>
         <div id="testLogContainer" style="padding: 0.5rem;">
-
         </div>
     </div>
 </body>
+
 </html>
