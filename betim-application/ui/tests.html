@@ -130,5 +130,36 @@
         </div>
     </div>
 </body>
+<script>
+function generateASTNatural(query) {
+    // Verify the css syntax and generate an AST object
+    // Ex: selector:"h1, h2, h3, h4, h5, h6 {transform: scale(1.10)}
+    let queryParts = query.split("{");
+    let selectorSection = queryParts[0];
+    
+    // extract selectors
+    let selectors = selectorSection.split(",");
+    selectors = selectors.map((e) => {return e.trim()})
 
+    let declarativeParts = queryParts[1].split(":");
+    let property = declarativeParts[0].trim();
+    let value = declarativeParts[1]
+        .trim()
+        .replace("}", "")
+        .replace(";", "");
+
+    let ast = [
+            {
+                "selectorGroup": [
+                    { "name": selectors }
+                ],
+                
+                "declarationBlock" : [
+                    {"property": property, "value": value, "important": true}
+                ]
+            }
+        ];
+    return ast;
+}
+</script>
 </html>

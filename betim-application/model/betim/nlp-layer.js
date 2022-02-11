@@ -32,7 +32,7 @@ export default class NLPLayer {
         this.openAI = new OpenAI(openAIKey, "davinci");
         console.log("NLP: OpenAPI is initialized.");
 
-        // GPT-3 Finetuning prompt
+        // GPT-3 default finetuning prompt
         this.fineTuningPrompt = `
         Generating CSS Rules
 
@@ -72,7 +72,7 @@ export default class NLPLayer {
         let gptOutput = await this.openAI.createCompletion(formattedPrompt, 40, ";");
         console.log(formattedPrompt, gptOutput.choices[0].text);
         return new Promise( (resolve, reject) => {
-            let ast = this.genereteAST(gptOutput.choices[0].text);
+            let ast = this.genereteASTStructural(gptOutput.choices[0].text);
             if (ast) {
                 console.log("AST", ast)
                 resolve(ast);
@@ -90,7 +90,7 @@ export default class NLPLayer {
      * TODO: Ensure fail safety
      * @param {String} query 
      */
-    genereteAST(query) {
+    genereteASTStructural(query) {
         // Ex: selector:"h1, h2, h3, h4, h5, h6", property:"transform", value:"scale(1.10)"
         // Extract parameters and values
         let removedVal = query.replace(/"[\w\s,()*!.\#\-"]*"/g, "");
@@ -136,5 +136,36 @@ export default class NLPLayer {
             "query": queryObj,
             "ast" : ast
         }
+    }
+
+    generateASTNatural(query) {
+        // Verify the css syntax and generate an AST object
+        // Ex: selector:"h1, h2, h3, h4, h5, h6 {transform: scale(1.10)}
+        let queryParts = query.split("{");
+        let selectorSection = queryParts[0];
+        
+        // extract selectors
+        let selectors = selectorSection.split(",");
+        selectors = selectors.map((e) => {return e.trim()})
+
+        let declarativeParts = queryParts[1].split(":");
+        let property = declarativeParts[0].trim();
+        let value = declarativeParts[1]
+            .trim()
+            .replace("}", "")
+            .replace(";", "");
+
+        let ast = [
+                {
+                    "selectorGroup": [
+                        { "name": selectors }
+                    ],
+                    
+                    "declarationBlock" : [
+                        {"property": property, "value": value, "important": true}
+                    ]
+                }
+            ];
+        return ast;
     }
 }
