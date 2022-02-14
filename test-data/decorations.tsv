@@ -1,0 +1,37 @@
+Add shadow to the cards	.card | card	box-shadow	*
+Add shadow for buttons	button	box-shadow	*
+Hide paragraphs	p	visibility	hidden
+Make images invisible	img	visibility	hidden
+Underline links when hovered	a:hover	text-decoration	underline
+Add padding to the paragraphs	p	padding	*
+Remove unnecessary margin from paragraph tags	p	margin	0
+Change text alignment for all paragraph tags	p	text-align	*
+Change text alignment for <p> tags with class "card" only	.card p | card p	text-align	*
+Hide links when hovered	a:hover	visibility	hidden
+Add text shadow to the paragraphs	p	text-shadow	initial
+Add transition to the cards	.card | card	transition	*
+Hide text	p	visibility	hidden
+Align links to the right	a	text-align	right
+Remove the border on links	a	border-style	none
+Align links to the center	a	text-align	center
+Remove the margin on images	img	margin	0
+Make paragraphs and cards have a border	.card, p | card, p	border	*
+Give paragraphs, cards and images a solid background color.	.card, p, img | card, p, img	background-color | background	*
+Add drop shadow to heading text	h1, h2, h3, h4, h5, h6	drop-shadow	*
+Remove padding on cards	.card | card	padding	0
+Add a top border to the card	.card | card	border-top	*
+Remove the border on images	img	border-style	none
+Add a right border to the paragraphs	p	border-right	*
+Align text center for all paragraphs	p	text-align	center
+Rotate images clockwise by 90 degrees	img	transform	rotate(90deg)
+Rotate images counterclockwise by 90 degrees	img	transform	rotate(-90deg)
+Add border radius to images	img	border-radius	*
+Hide images when hovered	img:hover	display	none
+Add more text formatting to the paragraph text	p	*	*
+Add some text formatting to the link tags	a	*	*
+Remove the padding on images	img	padding	0
+Remove the drop shadow from text	p	drop-shadow	none
+Add a border around links	a	border	*
+Add a top border to the paragraphs	p	border-top	*
+Remove left margin of card and page headings	.card, h1, h2, h3, h4, h5, h6	margin-left	0
+Add a bottom border to the cards	.card | card	border-bottom	*

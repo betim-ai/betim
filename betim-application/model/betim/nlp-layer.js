@@ -44,7 +44,7 @@ export default class NLPLayer {
 
        // Try to fetch prompt data from external file
        console.log("NLP: Trying to fetch external tuning-prompt file...")
-        let externalTuningResponse = await fetch("../../tuning-prompt");
+        let externalTuningResponse = await fetch("../../tuning-prompt-natural.txt");
         let externalTuningPrompt = await externalTuningResponse.text();
 
         if (externalTuningPrompt) {
@@ -72,7 +72,7 @@ export default class NLPLayer {
         let gptOutput = await this.openAI.createCompletion(formattedPrompt, 40, ";");
         console.log(formattedPrompt, gptOutput.choices[0].text);
         return new Promise( (resolve, reject) => {
-            let ast = this.genereteASTStructural(gptOutput.choices[0].text);
+            let ast = this.generateASTNatural(gptOutput.choices[0].text);
             if (ast) {
                 console.log("AST", ast)
                 resolve(ast);
@@ -166,6 +166,9 @@ export default class NLPLayer {
                     ]
                 }
             ];
-        return ast;
+        return {
+            raw: query,
+            ast: ast
+        };
     }
 }

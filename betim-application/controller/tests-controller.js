@@ -127,7 +127,7 @@ function startTest() {
  * Load test dataset
  */
 function loadTestSet() {
-    fetch("../../test-data/property_update.tsv").then( (data) => {
+    fetch("../../test-data/decorations.tsv").then( (data) => {
         betimNlp.prepare().then(() => {
             console.log("Betim NLP is ready.");
         });

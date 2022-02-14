@@ -1,0 +1,241 @@
+Make headings bigger	h1, h2, h3, h4, h5, h6	transform	*
+Make heading one bigger	h1	transform	*
+Make heading two smaller	h2	transform	*
+Increase heading size	h1, h2, h3, h4, h5, h6	transform	*
+Decrease size of heading two	h2	transform	*
+Make headings wider	h1, h2, h3, h4, h5, h6	width	*
+Increase height of headings	h1, h2, h3, h4, h5, h6	height	*
+Decrease headings height	h1, h2, h3, h4, h5, h6	height	*
+Make heading colors darker	h1, h2, h3, h4, h5, h6	color	*
+Make headings border thicker	h1, h2, h3, h4, h5, h6	border-width | border	*
+Make borders of headings wider	h1, h2, h3, h4, h5, h6	width	*
+Make heading borders darker	h1, h2, h3, h4, h5, h6	border-color | border	*
+Increase heading margins	h1, h2, h3, h4, h5, h6	margin	*
+Decrease heading paddings	h1, h2, h3, h4, h5, h6	padding	*
+Make heading one margin smaller	h1	margin	*
+Decrease paddings of heading one	h1	padding	*
+Make heading two margins larger	h2	margin	*
+Increase font weight of headings	h2	font-weight	*
+Make headings text bolder	h1, h2, h3, h4, h5, h6	font-weight	*
+Make heading one more bold	h1	font-weight	*
+Decrease font weight of heading five	h5	font-weight	*
+Increase letter spacing for headings	h1, h2, h3, h4, h5, h6	letter-spacing	*
+Decrease word spacing for headings	h1, h2, h3, h4, h5, h6	word-spacing	*
+Increase spaces between the letters in heading one	h1	letter-spacing	*
+Decrease spaces between the words for headings	h1, h2, h3, h4, h5, h6	word-spacing	*
+For headings increase spaces between the words	h1, h2, h3, h4, h5, h6	word-spacing	*
+line-height	h1, h2, h3, h4, h5, h6	line-height	*
+Make headings more opaque	h1, h2, h3, h4, h5, h6	opacity	*
+Make headings less transparent	h1, h2, h3, h4, h5, h6	opacity	*
+Increase the transparency in headings	h1, h2, h3, h4, h5, h6	opacity	*
+For heading two, decrease transparency	h2	opacity	*
+In headings, add more transparency	h1, h2, h3, h4, h5, h6	opacity	*
+Move headings to left	h1, h2, h3, h4, h5, h6	left	*
+Move headings more right.	h1, h2, h3, h4, h5, h6	right	*
+Position the headings more bottom	h1, h2, h3, h4, h5, h6	bottom	*
+Move headings more to bottom	h1, h2, h3, h4, h5, h6	position	*
+Increase text size	p	font-size	*
+Make paragraphs bigger	p	transform	*
+Decrease text size	p	font-size	*
+Make paragraphs smaller	p	transform	*
+Make paragraph text bolder	p	font-weight	*
+Make paragraph text thinner	p	font-weight	*
+Increase letter spacing of paragraphs	p	letter-spacing	*
+Decrease letter spacing of paragraphs	p	letter-spacing	*
+Increase line spacing for paragraphs	p	line-height	*
+Decrease line spacing for paragraphs	p	line-height	*
+Increase line height of paragraphs	p	line-height	*
+Decrease line height of paragraphs	p	height	*
+Make paragraphs font weight thicker	p	font-weight	*
+Make paragraphs font weight lighter	p	font-weight	*
+Make paragraphs background colors darker	p	background-color	*
+Make paragraphs text colors darker	p	color	*
+Increase opacity of paragraphs	p	opacity	*
+Decrease opacity of paragraphs	p	opacity	*
+Make paragraphs more transparent	p	opacity	*
+Make paragraphs less transparent	p	opacity	*
+Make paragraphs color darker	p	color	*
+Increase paragraphs margins	p	margin	*
+Decrease paragraphs margins	p	margin	*
+Make paragraphs margins bigger	p	margin	*
+Make paragraphs margins smaller	p	margin	*
+Increase paragraphs paddings	p	padding	*
+Decrease paragraphs paddings	p	padding	*
+Move paragraphs position more right	p	right	*
+Move paragraphs position more left	p	left	*
+Move paragraphs position higher	p	top	*
+Move paragraphs position lower	p	bottom	*
+Make links text bigger	a	transform	*
+Increase link sizes	a	transform	*
+Increase link width	a	width	*
+Decrease links height	a	height	*
+For links, increase width	a	width	*
+Decrease hyperlinks height	a	height	*
+Increase width of hyperlinks	a	width	*
+Make hyperlinks color darker	a	color	*
+Make hyperlink colors lighter	a	color	*
+Make hyperlink text color darker	a	color	*
+Increase hyperlink text saturation	a	color	*
+Increase thickness of hyperlink borders	a	border-width	*
+Make hyperlink borders bolder	a	border-width	*
+For hyperlinks make borders thicker	a	border-width	*
+Make link borders darker	a	border-color	*
+Make link border colors lighter	a	border-color	*
+Increase margins of links	a	margin	*
+Decrease margins for hyperlinks	a	margin	*
+Make hyperlink margins larger	a	margin	*
+Make link margins smaller	a	margin	*
+Make hyperlink paddings smaller	a	padding	*
+Make link margins larger	a	margin	*
+Increase padding of links	a	padding	*
+For links, decrease paddings	a	padding	*
+Increase letter spacing on links	a	letter-spacing	*
+For hyperlinks decrease letter spacing	a	letter-spacing	*
+Decrease spaces between words for hyperlinks	a	word-spacing	*
+Increase spaces between letters for hyperlinks	a	letter-spacing	*
+For links, increase spaces between words	a	word-spacing	*
+Increase font weight for links	a	font-weight	*
+Decrease font-weight for hyperlinks	a	font-weight	*
+For links, make text bolder	a	font-weight	*
+Make text thinner for links	a	font-stretch	*
+Make hyperlink text lighter	a	color	*
+Decrease transparency on hyperlinks	a	opacity	*
+Make hyperlinks more transparent	a	opacity	*
+Increase hyperlink opacity	a	opacity	*
+Decrease opacity of hyperlinks	a	opacity	*
+Make links more opaque	a	opacity	*
+Increase link opacity	a	opacity	*
+Move links more left	a	position	*
+Move hyperlinks more right	a	position	*
+Position hyperlinks to the left	a	position	*
+Slightly move hyperlinks to right	a	position	*
+Make hyperlink positioning more bottom	a	position	*
+Move hyperlink positions more to the top	a	position	*
+Make button bigger	button	transform	*
+Make button smaller	button	transform	*
+Increase button size	button	transform	*
+Decrease button size	button	transform	*
+Increase button text width	button	font-stretch	*
+Decrease button width	button	width	*
+Make button more opaque	button	opacity	*
+Make button less transparent	button	opacity	*
+Increase the transparency in button	button	opacity	*
+For button,add more transparency	button	opacity	*
+Move button position more right	button	position	*
+Move button position more left	button	position	*
+Make button positioning more bottom	button	position	*
+Make button positioning more to the top	button	position	*
+Make button text bigger	button	font-size	*
+Make button text smaller	button	font-size	*
+Increase button text size	button	font-size	*
+Decrease button text size	button	font-size	*
+Increase height of button text	button	height	*
+Decrease height of button text	button	height	*
+Increase button text width	button	font-stretch	*
+Decrease button text width	button	font-stretch	*
+Make button text color darker	button	color	*
+Decrease font weight of button text	button	font-weight	*
+Increase letter spacing for button text	button	letter-spacing	*
+Decrease word spacing for button text	button	word-spacing	*
+Increase spaces between the letters in button text	button	letter-spacing	*
+Decrease spaces between the words for button text	button	word-spacing	*
+For button text increase spaces between the words	button	word-spacing	*
+Increase line height of button text	button	line-height	*
+Make button text more opaque	button	opacity	*
+Make button text less transparent	button	opacity	*
+Increase the transparency in button text	button	opacity	*
+For button text, add more transparency	button	opacity	*
+Make button border darker	button	border-color	*
+Make borders of button wider	button	border-width	*
+Make button border thicker	button	border-width	*
+Make button background color darker	button	background-color	*
+Make button background color more opaque	button	opacity	*
+Make button background less transparent	button	opacity	*
+Make footers smaller	footer	transform	*
+Make footer wider	footer	width	*
+Make footer thinner	footer	width	*
+Increase footer size	footer	width	*
+Scale up footer	footer	transform	*
+Scale down the size of footer	footer	transform	*
+Increase width of footer	footer	width	*
+Increase height of footer	footer	height	*
+Decrease footer height	footer	height	*
+Increase footer height	footer	height	*
+Make footer background darker	footer	background-color	*
+Make footer background lighter	footer	background-color	*
+Increase the saturation of the footer background	footer	background-color	*
+For footers make background color brighter	footer	background-color	*
+Make footer text color darker	footer	color	*
+Make text color lighter for footers	footer	color	*
+Make footer borders wider	footer	width	*
+Make footer borders thicker	footer	border-width	*
+Make borders smaller for footers	footer	border-width	*
+Increase footer border radius	footer	border-radius	*
+Decrease footer border roundness	footer	border-radius	*
+Increase the roundness of footer borders	footer	border-radius	*
+Decrease the border width of footers	footer	border-width	*
+Increase footer paddings	footer	padding	*
+Decrease padding of footers	footer	padding	*
+Increase margin of footer	footer	margin	*
+Make footer margin bigger	footer	margin	*
+Make footer paddings smaller	footer	padding	*
+Increase bottom margin of footers	footer	margin	*
+Decrease left padding of footer	footer	padding-left	*
+Make footer right padding wider	footer	padding-right	*
+Increase letter spacing in footer	footer	letter-spacing	*
+Increase spaces between letters in footer	footer	letter-spacing	*
+Increase height of lines in footer	footer	line-height	*
+Decrease the line height in footer	footer	line-height	*
+For footer decrease spaces between the letters	footer	letter-spacing	*
+Increase word spacing in footer	footer	word-spacing	*
+Decrease spaces between the words in footer	footer	word-spacing	*
+Increase the font weight in footer	footer	font-weight	*
+Make footer text bolder	footer	font-weight	*
+Make footer text lighter	footer	font-weight	*
+Make footer text thinner	footer	font-weight	*
+Make footer more transparent	footer	opacity	*
+Increase footer opacity	footer	opacity	*
+Make footer more opaque	footer	opacity	*
+Increase the opacity for footer	footer	opacity	*
+Move footer to top	footer	top	*
+Slightly move footer to the left	footer	left	*
+Position footer more to the bottom	footer	bottom	*
+Set footer positioning to the more left	footer	position	*
+Make ordered list items smaller	ol	transform	*
+Make unordered list items smaller	ul	transform	*
+Increase the height of lists	ul,ol	height	*
+Decrease the height of the ordered lists	ol	height	*
+Decrease the width of unordered list items	ul	width	*
+Increase the width of ordered list items	ol	width	*
+Make lists wider	ul,ol	width	*
+Make lists narrower	ul,ol	width	*
+Increase the height of lists	ul,ol	height	*
+Decrease list heights	ul,ol	height	*
+Increase height of ordered list items	ol	height	*
+Decrease the height of unordered list items	ul	height	*
+Make list item background colors brighter	ul,ol	background-color	*
+Make list text color darker	ul,ol	color	*
+Make font color of ordered list items darker	ol	color	*
+Make unordered list background brighter	ul	background-color	*
+Increase brightness of ordered list background	ol	background-color	*
+Make list item borders wider	ul,ol	border-width	*
+Increase roundness of list item borders	ul,ol	border-radius	*
+Make unordered list border bolder	ul	border-width	*
+Increase border width of ordered lists	ol	border-width	*
+Decrease border radius for ordered lists	ol	border-radius	*
+Reduce the roundness of list item borders	ul,ol	border-radius	*
+Make list item borders sharper	ul,ol	border-radius	*
+Increase margin of list items	ul,ol	margin	*
+Decrease margin of unordered list	ul	margin	*
+Make list margins bigger	ul,ol	margin	*
+Increase the padding of unordered list items	ul	padding	*
+Increase the margin for ordered list	ol	margin	*
+Decrease the padding of ordered lists	ol	padding	*
+Increase the spaces between letters in ordered lists	ol	letter-spacing	*
+Increase letter spacing of list items	ul,ol	letter-spacing	*
+Decrease spaces between the words of list items	ul,ol	word-spacing	*
+Decrease word spacing in unordered list	ul	word-spacing	*
+Make unordered list font bolder	ul	font-style	*
+Make list items text bolder	ul,ol	font-weight	*
+Increase list item font weight	ul,ol	font-weight	*
+Decrease the boldness of list items	ul,ol	font-weight	*
