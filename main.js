@@ -10,9 +10,7 @@ function createWindow () {
         }
     });
    // win.setMenu(null);
-    win.loadFile("betim-application/ui/tests.html");
-    process.env.GOOGLE_API_KEY = 'ccd9434b46b3c7adb961bacc62f5607bb335aa64'
-
+    win.loadFile("betim-application/ui/browser-window.html");
 }
 
 app.whenReady().then(createWindow);
