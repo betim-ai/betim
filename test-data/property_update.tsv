@@ -1,0 +1,257 @@
+Make heading colors red	h1, h2, h3, h4, h5, h6	color	red
+Set heading border color to yellow	h1, h2, h3, h4, h5, h6	border-color	yellow
+Set heading background color to yellow	h1, h2, h3, h4, h5, h6	background-color	yellow
+Make heading background gradient of green and blue	h1, h2, h3, h4, h5, h6	background-color	linear-gradient(green, yellow)
+Set headings border width to 1rem	h1, h2, h3, h4, h5, h6	border-width	1rem
+Set heading left border width to 10 pixels	h1, h2, h3, h4, h5, h6	border-left-width	10px
+Set headings border radius to 0.5 rem	h1, h2, h3, h4, h5, h6	border-radius	0.5rem
+Make heading borders dashed	h1, h2, h3, h4, h5, h6	border-style	dashed
+Set headings margin to 1 rem	h1, h2, h3, h4, h5, h6	margin	1rem
+Set bottom margin of headings to 10 pixels	h1, h2, h3, h4, h5, h6	margin-bottom	10px
+Set right margin of headings to 5 rem	h1, h2, h3, h4, h5, h6	margin-right	5rem
+Set heading one padding to 1 rem	h1	padding	1rem
+Set headings left padding to 1 rem	h1, h2, h3, h4, h5, h6	padding-left	1rem
+Set right padding to 2 pixels for headings	h1, h2, h3, h4, h5, h6	padding-right	2px
+Make headings height 2 rem	h1, h2, h3, h4, h5, h6	height	2rem
+Set headings minimum height to 5 rem	h1, h2, h3, h4, h5, h6	min-height	5rem
+Set heading one height to 10 pixels	h1	height	10px
+Set heading two maximum height as 2rem	h2	max-height	2rem
+Set headings minimum width as 1rem	h1, h2, h3, h4, h5, h6	min-width	1rem
+Make headings width 3 rem	h1, h2, h3, h4, h5, h6	width	3rem
+Set text align center for headings	h1, h2, h3, h4, h5, h6	text-align	center
+Align headings right	h1, h2, h3, h4, h5, h6	text-align	right
+Align headings left	h1, h2, h3, h4, h5, h6	text-align	left
+Set letter spacing to 5 pixels for headings	h1, h2, h3, h4, h5, h6	letter-spacing	5px
+Set headings line height 2 rem	h1, h2, h3, h4, h5, h6	line-height	2rem
+Set word spacing to 20 pixels for headings	h1, h2, h3, h4, h5, h6	word-spacing	20px
+Set headings direction as right to left	h1, h2, h3, h4, h5, h6	direction	rtl
+Set headings indent as 2 rem	h1, h2, h3, h4, h5, h6	text-indent	2rem
+Set text shadow color green for headings	h1, h2, h3, h4, h5, h6	text-shadow	green
+Set headings font as Courier New	h1, h2, h3, h4, h5, h6	font-family	"Courier New"
+Set headings font variant small capitals	h1, h2, h3, h4, h5, h6	font-variant	small-caps
+Make headings italic	h1, h2, h3, h4, h5, h6	font-style	italic
+Make headings bold	h1, h2, h3, h4, h5, h6	font-weight	bold
+Set headings font weight to 900	h1, h2, h3, h4, h5, h6	font-weight	900
+Set headings visibility to hidden	h1, h2, h3, h4, h5, h6	overflow	hidden
+Set headings display to none	h1, h2, h3, h4, h5, h6	display	none
+Set headings display to inline text	h1, h2, h3, h4, h5, h6	display	inline
+Set headings opacity 50 percent	h1, h2, h3, h4, h5, h6	opacity	0.5
+Position headings relative	h1, h2, h3, h4, h5, h6	position	relative
+Make headings sticky	h1, h2, h3, h4, h5, h6	position	sticky
+Make paragraph text color white	p	color	white
+Set paragraph color green	p	color	green
+Make paragraph border color yellow	p	border-color	yellow
+Set paragraph background to black	p	background-color	black
+Set paragraph border width to 2 rem	p	border-width	2rem
+Set paragraph border style solid	p	border-style	solid
+Make paragraph borders dashed	p	border-style	dashed
+Set paragraph border radius to 5 px.	p	border-radius	5px
+Set paragraph margin to 5 pixels	p	margin	5px
+Set paragraph right margin as 2 rem	p	margin-right	2rem
+Make paragraph margins 1 rem	p	margin	1rem
+Set paragraph bottom margin to 7 rem	p	margin-bottom	7rem
+Set paragraph padding to 1 pixels	p	padding	1px
+Make paragraph right padding 4rem	p	padding-right	4rem
+Set padding bottom to 2rem for paragraphs	p	padding-bottom	2rem
+Set paragraph left padding to 1rem	p	padding-left	1rem
+Set paragraph line height to 1.6	p	line-height	1.6
+Set word spaces to 2 rems for paragraphs	p	word-spacing	2rem
+Set paragraph line height to 2 rem	p	line-height	2rem
+Make paragraph text decoration none	p	text-decoration	none
+Set paragraph text transformation to uppercase	p	text-transform	uppercase
+Set paragraph text align to left	p	text-align	left
+Align paragraphs center	p	text-align	center
+Set paragraph fonts monospaced	p	font-family	Monospace
+Change paragraph fonts to Comic Sans	p	font-family	"Comic Sans"
+Make paragraph font variant small caps	p	font-variant	small-caps
+Set paragraph text indent to 2 rem	p	text-indent	2rem
+Set paragraph display block	p	display	block
+Set paragraphs display to none	p	display	none
+Make paragraphs display inline block	p	display	inline-block
+Set paragraphs opacity to 80 percent	p	opacity	80%
+Make paragraphs position relative	p	position	relative
+Set paragraphs position absolute	p	position	absolute
+Set paragraph positioning from top 5 pixels	p	top	5px
+Set paragraph positioning to right as 2 rem	p	right	2rem
+Set link text color pink	a	color	pink
+Set link border color green	a	border-color	green
+Make link background brown	a	background-color	brown
+Set link color red when hovered	a:hover	color	red
+Set border style solid for the links	a	border-style	solid
+Set links border with as 3px	a	border-width	3px
+Make link borders dashed	a	border-style	dashed
+Set bottom border color to green	a	border-bottom-color	green
+Set margin to 5 rem for hyperlinks	a	margin	5rem
+Set bottom margin to 3 rem for hyperlinks	a	margin-bottom	3rem
+Set padding to 1 rem for hyperlinks	a	padding	1rem
+Make hyperlink right padding 2 rem when active	a:active	padding-right	2rem
+Align links text left	a	text-align	left
+Set letter spacing to 5px for links	a	letter-spacing	5px
+Set hyperlink text shadow color black	a	text-shadow	black
+Set whitespace width between the words to 3rem for links	a	word-spacing	3rem
+Set hyperlink font size to 3 em	a	font-size	3em
+Make hyperlink fonts italic	a	font-style	italic
+Set hyperlink font-weight to 800 when hovered	a:hover	font-weight	800
+Set hyperlink font family to sans serif	a	font-family	sans-serif
+Set links display none	a	display	none
+Set links visibility to hidden	a	visibility	hidden
+Set links display block	a	display	block
+Make links display inline	a	display	inline
+Set links minimum width to 10rem	a	min-width	10rem
+Set links width to 1 rem	a	width	1rem
+Set links height to 10 rem	a	height	10rem
+Set links opacity to 1 when hovered	a:hover	opacity	1
+Make links opacity 50 percent	a	opacity	0.5
+Change links opacity to 80 percent when active	a:active	opacity	0.8
+Set hyperlink positions to absolute	a	position	absolute
+Set hyperlink left position to 42px	a	left	42px
+Set hyperlink top positioning to 10rem	a	top	10rem
+Set hyperlink position relative	a	position	relative
+Make hyperlinks positioning sticky	a	position	sticky
+Remove button border	button	border-style	none
+Make button text color red	button	color	red
+Make button text color purple when hovered	button:hover	color	purple
+Make button background color light green	button	background-color	lightgreen
+Make button background color dark orange when hovered	button:hover	background-color	darkorange
+Make button border color purple	button	border-color	purple
+Set button border radius to 0.5 rem	button	border-radius	0.5rem
+Make button borders solid	button	border-style	solid
+Make button borders width 0	button	border-width	0
+Set button border width to 12 pixels	button	border-width	12px
+Make buttons border width 8 pixels when hovered	button:hover	border-width	8px
+Set button paddings to 1 rem	button	padding	1rem
+Set bottom padding of buttons to 2 rem	button	padding-bottom	2rem
+Set paddings to 2 rem when buttons are clicked	button:active	padding	2rem
+Set button margins to 5 rem	button	margin	5rem
+Make margins 2 pixels for buttons	button	margin	2px
+Make margins of buttons 1 rem when active	button:active	margin	1rem
+Set button right margin to 2 rems	button	margin-right	2rem
+Indent button text 1 rem	button	text-indent	1rem
+Set letter spacing to 1 rem for buttons	button	letter-spacing	1rem
+Change word spacing to 5 rem for buttons	button	word-spacing	5rem
+Set text shadow as 2 pixels in buttons	button	text-shadow	2px
+Make button fonts arial	button	font-family	Arial
+Set font size of the button to 15 pixels	button	font-size	15px
+Make button text aligned at center	button	text-align	center
+Set button font variant small caps	button	font-variant	small-caps
+Make buttons font weight bolder when clicked and hovered	button:hover, button:hover	font-weight	bolder
+Set buttons display to none	button	display	none
+Set buttons display as inline block	button	display	inline-block
+Make buttons display block	button	display	block
+Set button opacity to 0.6	button	opacity	0.6
+Change buttons opacity to 50 percent when clicked	button:active	opacity	0.5
+Change buttons opacity to 1 when hovered	button:hover	opacity	1
+Set button positioning relative	button	position	relative
+Make buttons sticky	button	position	sticky
+Make button cursor pointer	button	cursor	pointer
+Set button border radius to 50%	button	border-radius	50%
+Set footer background color gray	footer	background-color	gray
+Make footer text color black	footer	color	black
+Set footer border color green	footer	border-color	green
+Make footer border color dark blue	footer	border-color	darkblue
+Set footer background as linear gradient of aqua and yellow	footer	background-image	linear-gradient(aqua, yellow);
+Change footer text color to black	footer	color	black
+Make footer borders dashed	footer	border-style	dashed
+Change footer border radius to 5rem	footer	border-radius	5rem
+Set footer border width to 5 pixels	footer	border-width	5px
+Set top left border radius as 1 rem	footer	border-radius	1 rem
+Change footer padding to 5 rem	footer	padding	5rem
+Set footer left and right padding 15 rem	footer	padding-left, padding-right	15rem
+Set footer margin to 1 rem	footer	margin	1rem
+Set footer top margin to 2 rem	footer	margin-top	2rem
+Make footer bottom margin 1rem	footer	margin-bottom	1rem
+Align footer text left	footer	text-align	left
+Set text alignment center in footer	footer	text-align	center
+Set line height to 2 rem in footer	footer	height	2rem
+Set letter spacing to 1 rem in footer	footer	letter-spacing	1rem
+Set text decoration as underlined in footer	footer	text-decoration	underline
+Set footer text direction right to left	footer	direction	rtl
+Set text shadow color to purple in footer	footer	text-shadow	*px *px *px purple
+Change font family to Courier New in footer	footer	font-family	"Courier New"
+Set font family to comic sans in footer	footer	font-family	"Comic Sans"
+Set footer font size to 2 rem	footer	font-size	2rem
+Make footer font style italic	footer	font-style	italic
+Make footer font variant small caps	footer	font-variant	small-caps
+Set footer font weight to 200	footer	font-weight	200
+Set footer display property as none	footer	display	none
+Make footer display inline block	footer	display	inline-block
+Set footer display to none	footer	display	none
+Make footer opacity 1	footer	opacity	1
+Set footer opacity to 0.5 rem	footer	opacity	0.5
+Make footer positioning absolute	footer	position	absolute
+Make footer sticky	footer	position	sticky
+Set unordered list color to green	ul	color	green
+Make unordered list text color black	ul	color	black
+Set ordered list text color to crimson	ol	color	crimson
+Set unordered list background color yellow	ul	background|background-color	yellow
+Set unordered list background linear gradient of green and blue	ul	background	linear-gradient(green, blue);
+Set unordered list item color to red	ul li|ul	color	red
+Make ordered list item color purple	ol li	color	purple
+Set unordered lists right padding to 2 rem	ul	padding-right	2rem
+Set unordered lists left margin to 1 rem	ul	margin-left	1rem
+Set unordered list items left padding to 2 rem	ul li	padding-left	2rem
+Make ordered list item margins 1 rem	ol	margin	1rem
+Set ordered list items bottom margin to 2 rem	ol	margin-bottom	2rem
+Set ordered list display to none	ol	display	none
+Set unordered list items display to none	ul	display	none
+Set unordered list display to inline block	ul	display	inline-block
+Set ordered list display to block	ol	display	block
+Make ordered list items letter spacing to 5px	ol	letter-spacing	5px
+Set unordered list items word spacing to 5 rem	ul	word-spacing	5rem
+Set ordered list items font style to normal	ol	font-style	normal
+Make unordered list items font italic	ul	font-style	italic
+Set ordered list items font variant to small caps	ol	font-variant	small-caps
+Set unordered list style type circles	ul	list-style-type	circle
+Make unordered list bullets square	ul	list-style-type	square
+Set ordered list style to katakana	ol	list-style-type	katakana
+Set ordered list style as roman	ol	list-style-type	roman
+Set ordered list style to upper latin	ol	list-style-type	upper-latin
+Make ordered list style none	ol	list-style-type	none
+Make ordered list position absolute	ol	position	absolute
+Set unordered list position relative	ul	position	relative
+Set image border width to 1 rem	img	border-width	1rem
+Set image border color to purple	img	border-color	purple
+Make image borders grey	img	border-color	grey
+Set image border radius to 5 rem	img	border-radius	5rem
+Set image margins to 2 rem	img	margin	2rem
+Make image left margin 1 rem	img	margin-left	1rem
+Set padding to 2 rem for images	img	padding	2rem
+Set image bottom padding to 2 rem	img	padding-bottom	2rem
+Make image visibility hidden	img	visibility	hidden
+Make image display none	img	display	none
+Set images display block	img	display	block
+Set images position to absolute	img	position	absolute
+Make images positioning relative	img	position	relative
+Set images top position to 1 rem	img	top	1rem
+Set images bottom position to 2 rem	img	bottom	2rem
+Make images sticky	img	position	fixed
+Set form background color white	form	background-color	white
+Set form background as linear gradient of aqua and lightgray	form	background-color	linear-gradient(aqua, lightgray)
+Make form text color blue	form	color	blue
+Make form borders color purple	form	border-color	purple
+Make form borders dashed	form	border-style	dashed
+Change form border radius to 8rem	form	border-radius	8rem
+Make form border radius to 5 pixels	form	border-radius	5px
+Set form input borders color blue	input	border-color	blue
+Change form input bottom borders color brown	input	border-bottom-color	brown
+Make form input borders dotted	input	border-style	dotted
+Make form input right borders dashed	input	border-right-style	dashed
+Set form input borders width medium	input	border-width	medium
+Change form input borders width to 5 pixels	input	border-width	5px
+Make form input bottom borders width 8 pixels	input	border-bottom-width	8px
+Change form input border radius 7rem	input	border-radius	7rem
+Make form input border radius 9 pixels	input	border-radius	9px
+Set form input background color lightgrey	input	background-color|background	lightgrey
+Set form input background as linear gradient of gray and lightgray	input	background-color|background	linear-gradient(gray,lightgray)
+Set text alignment center in form	form	text-align	center
+Set form input left padding to 4 rem	input	padding-left	4rem
+Set form left and right padding 20 rem	form	padding-left, padding-right	20rem
+Change form top margin to 15 rem	form	margin-top	15rem
+Make form text font italic	form	font-style	italic
+Change form text font-family to Arial	form	font-family	Arial
+Set form text font oblique	form	font-style	oblique
+Set form text font variant small-caps	form	font-variant	small-caps
+Make form text font weight 100	form	font-weight	100
+Make form opacity 50%	form	opacity	0.5
+Set form input opacity to 0.5	input	opacity	0.5
+Make form text opacity to 0.3	form	opacity	0.3

@@ -1,0 +1,14 @@
+Generating CSS Rules
+
+Make button borders width zero => button {border-width: 0};
+Make headings width 3 rem => h1, h2, h3, h4, h5, h6	{width: 3rem};
+Align footer text left => footer {text-align: left};
+Make body background black => body {background: black};
+Increase the opacity for footer	=> footer {opacity: 1.0};
+Increase margin of list items => ul, ol {margin: 2rem};
+Decrease footer border roundness => footer {border-radius: 0};
+Make paragraph text bigger => p {font-size: 2rem};
+Remove the padding on images =>	img {padding: 0};
+Align text center for all paragraphs => p {text-align: center};
+Add shadows for cards => .card {box-shadow: 10px 5px 5px black};
+

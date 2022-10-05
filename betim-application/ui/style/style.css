@@ -1,2 +1,190 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.brand {
+  font-style: oblique;
+}
+
+h2 {
+  margin: 15px;
+  font-size: 60px;
+  font-family: Merriweather, serif;
+}
+
+.button {
+  background-color: #d4d3d3;
+  border-radius: 0.2rem;
+  border-width: 0;
+  color: #333333;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-color: #cacaca;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(0.98);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.button:active {
+  transform: scale(0.95);
+}
+
+#intro-container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute;
+}
+
+#browser-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#browser-container #browser-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background: #3f2f4e;
+}
+#browser-container #browser-bar h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+  margin-bottom: 0px;
+}
+#browser-container #browser-bar #address-container {
+  display: flex;
+  width: 40%;
+}
+#browser-container #browser-bar #address-container .button {
+  margin-left: 12px;
+}
+#browser-container #browser-bar .toolbar {
+  display: flex;
+}
+#browser-container #browser-bar .toolbar .toolbar-item {
+  color: white;
+  padding-left: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 28px;
+}
+#browser-container #browser-bar .toolbar .toolbar-item:hover {
+  opacity: 0.5;
+}
+#browser-container #browser-bar .toolbar .toolbar-item:active {
+  opacity: 1;
+}
+#browser-container #content-frame-webview {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-container {
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  padding: 20px;
+}
+
+.url-input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: 0.3rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  transition: 0.25s;
+  border-width: 0px;
+  font-size: 1rem;
+}
+.url-input:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.url-input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: dimgrey;
+  border-width: 2px;
+}
+
+.message-pane {
+  position: absolute;
+  top: 4rem;
+  right: 0.8rem;
+  width: 22rem;
+  z-index: 10;
+}
+
+.toast-card {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.toast-card-danger {
+  background: rgba(255, 192, 192, 0.9);
+  color: #5c0000;
+}
+
+.toast-card-success {
+  background: rgba(206, 253, 206, 0.9);
+  color: #045019;
+}
+
+.text-prompt-container {
+  margin-bottom: 0.5rem;
+  background: rgba(236, 236, 236, 0.7);
+  padding: 1rem;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  transition: ease-in-out 1s;
+}
+.text-prompt-container .text-prompt {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border-width: 0;
+  font-size: 1rem;
+}
+.text-prompt-container .button {
+  background: #976fc4;
+  float: right;
+  color: white;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+}
+
+.ghost {
+  transition: ease-in-out 0.5s;
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */

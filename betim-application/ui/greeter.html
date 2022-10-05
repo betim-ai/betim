@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Betim</title>
+    <link rel="icon" href="https://www.flaticon.com/svg/vstatic/svg/2491/2491413.svg?token=exp=1615571425~hmac=65b2a01e54f8bd320de353f6156f379c">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="test.js"></script>
+    <link href="style/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="intro-container">
+    <div id="welcome-page" >
+        <div class="flex-container" >
+            <img src="https://www.flaticon.com/svg/vstatic/svg/1437/1437974.svg?token=exp=1616098702~hmac=a94cdce5854c87d9fdfcf3586a09aea8" width="50" height="50">
+            <img src="https://www.flaticon.com/svg/vstatic/svg/2491/2491413.svg?token=exp=1616098749~hmac=9d7ae7f3ac1eeeea941245f16e505f69"  width="90" height="90">
+            <h2><i>BETİM</i></h2>
+        </div>
+        <div>
+            <p><i style="font-size: 18px">"Change styles with your own words!"</i></p>
+        </div>
+
+        <div class="card flex-container" >
+            <input id="inputURL" type="text" class="pure-input-rounded" />
+        </div>
+        <div>
+            <button id="loadButton" class="button" onclick="loadButton()">LOAD</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function loadButton () {
+        document.getElementById("introContainer").remove();
+        window.location = "browser-window.html";
+    }
+</script>
+</html>

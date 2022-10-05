@@ -4,11 +4,50 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Betim</title>
+    <link rel="icon" href="https://www.flaticon.com/svg/vstatic/svg/2491/2491413.svg?token=exp=1615571425~hmac=65b2a01e54f8bd320de353f6156f379c">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="../controller/browser-controller.js" type="module"></script>
     <link href="style/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 <body>
-    <h1>Betim</h1>
+
+<div id="browser-container">
+    <div id="browser-bar">
+        <h1 class="brand">Betim</h1>
+        <div class="address-container" id="address-container">
+            <input id="bar-url-input" type="text" class="url-input"/>
+            <button id="load-btn" class="button">Go</button>
+        </div>
+        
+        <div class="toolbar">
+            <i id="bar-text-input-btn" class="toolbar-item material-icons">message</i>
+        </div>
+        
+    </div>
+    <webview id="content-frame-webview" src="http://info.cern.ch"></webview>
+</div>
+
+<div class="message-pane">
+    <div class="text-prompt-container animate__animated animate__fadeIn">
+        <input id="betim-text-input" class="text-prompt" type="text" placeholder="Explain your style rule..."/>
+        <button id="betim-text-apply-btn" class="button">Apply</button>
+    </div>
+
+    <div id="toast-container">
+
+    </div>
+</div>
+
 </body>
+<script>
+    function loadButton () {
+        document.getElementById("introContainer").remove();
+        document.getElementById("browserContainer").style.visibility= "visible";
+        document.body.style.backgroundImage= "none";
+    }
+</script>
+<script src="../reader.js"></script>
 </html>
