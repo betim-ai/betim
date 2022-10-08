@@ -2,21 +2,45 @@
 Betim is a use case implementation of OpenAI' s GPT-3. Using GPT-3, betim application creates CSS statements from natural utterances.
 
 #### ▶️ Running the application:
+Betim is an ElectronJS application. The following requirements needs to be met on the system:
+ * node
+ * npm
+ * electonJs (You can install electron simply by running `npm install --save electon` command.)
 
-For running Betim, it is required to obtain an API key from OpenAI. The API key needs to be set through the config file.
+For generating CSS codes, Betim uses GPT-3 from OpenAI.
+Therefore, an API key is required for using OpenAI API. 
+You can visit https://beta.openai.com/ for obtaining an API key.
+
+Once you had the API key, set your API key through secrets.json file.
+
+You can start the application using `npm start` command.
 
 #### 💬 Prompt Tips:
 
 In order to use betim, it is recommended to describe the target element and properties of the css rule. You can find some examples below:
 
-“Make body background black” -> .body {background: black}
+1. `“Make body background black”`
+```
+.body {
+    background: black
+}
+```
+
+2. `“Make headings white”`
+```
+.h1, h2, h3, h4, h5, h6 {
+    color: white
+}
+```
 
 #### 🖥 Tech Stack:
 
 For developing Betim, following technologies are used:
-Electron JS (NodeJS, JavaScript)
-PureCSS (CSS3)
-GPT-3
+* Electron JS (NodeJS, JavaScript)
+* PureCSS (CSS3)
+* HTML
+* Jquery
+* GPT-3
 
 #### 📜 Research Paper
 
